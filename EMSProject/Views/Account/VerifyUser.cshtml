@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<div class="container-fluid">
+    <div class="col-6 offset-3">
+        <div class="card mt-5">
+            <div class="card-header">
+                <h4 class="card-title">Verify Account</h4>
+            </div>
+            <div class="card-body">
+                <form asp-action="VerifyUser" asp-controller="Account" method="post">
+                    <div class="form-group">
+                        <label>Enter your OTP :</label>
+                            <input class="form-control" name="Otp" placeholder="OTP..">            
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Validate</button>
+                    </div>
+                    <div class="form-group">
+                        <a asp-action="Login" asp-controller="Account">Signin here....</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
